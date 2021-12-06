@@ -1,0 +1,744 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /project/genomics/xuePeng/workPlace/2021/lifestyle_predict_my/bayes_classifier/db/integrase_pfv34.hmm
+# target sequence database:        ./example/simulate_art_sample1.21.faa
+# output directed to file:         ./test/BC_pfam/simulate_art_sample1.21.BC_integrase.hmmsearch.out
+# per-seq hits tabular output:     ./test/BC_pfam/simulate_art_sample1.21.BC_integrase.hmmsearch.tblout
+# number of worker threads:        1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Arm-DNA-bind_1  [M=74]
+Accession:   PF09003.12
+Description: Bacteriophage lambda integrase, Arm DNA-binding domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (74 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         0  (0); expected 1.3 (0.02)
+Passed bias filter:                        0  (0); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 488.57
+//
+Query:       DUF3701  [M=93]
+Accession:   PF12482.10
+Description: Phage integrase protein
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (93 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         1  (0.015625); expected 1.3 (0.02)
+Passed bias filter:                        1  (0.015625); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1303.56
+//
+Query:       gag_pre-integrs  [M=67]
+Accession:   PF13976.8
+Description: GAG-pre-integrase domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (67 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         0  (0); expected 1.3 (0.02)
+Passed bias filter:                        0  (0); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 1444.14
+//
+Query:       Integrase_1  [M=146]
+Accession:   PF12835.9
+Description: Integrase
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (146 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         3  (0.046875); expected 1.3 (0.02)
+Passed bias filter:                        2  (0.03125); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1837.82
+//
+Query:       Integrase_DNA  [M=58]
+Accession:   PF02920.17
+Description: DNA binding domain of tn916 integrase
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (58 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         4  (0.0625); expected 1.3 (0.02)
+Passed bias filter:                        1  (0.015625); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1249.97
+//
+Query:       Integrase_H2C2  [M=58]
+Accession:   PF17921.3
+Description: Integrase zinc binding domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (58 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         3  (0.046875); expected 1.3 (0.02)
+Passed bias filter:                        2  (0.03125); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1264.38
+//
+Query:       Integrase_Zn  [M=38]
+Accession:   PF02022.21
+Description: Integrase Zinc binding domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (38 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         4  (0.0625); expected 1.3 (0.02)
+Passed bias filter:                        4  (0.0625); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 704.21
+//
+Query:       IN_DBD_C  [M=45]
+Accession:   PF00552.23
+Description: Integrase DNA binding domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (45 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         0  (0); expected 1.3 (0.02)
+Passed bias filter:                        0  (0); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1047.31
+//
+Query:       MLVIN_C  [M=84]
+Accession:   PF18697.3
+Description: Murine leukemia virus (MLV) integrase (IN) C-terminal domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (84 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         1  (0.015625); expected 1.3 (0.02)
+Passed bias filter:                        1  (0.015625); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1546.98
+//
+Query:       Phage_integrase  [M=172]
+Accession:   PF00589.24
+Description: Phage integrase family
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                             -----------
+    3.1e-22   71.2   0.6    3.1e-22   71.2   0.6    2.0  2  NODE_12_length_17024_cov_6.475868_36  # 14310 # 15359 # 1 # ID=1_36;pa
+
+
+Domain annotation for each sequence (and alignments):
+>> NODE_12_length_17024_cov_6.475868_36  # 14310 # 15359 # 1 # ID=1_36;partial=00;start_type=ATG;rbs_motif=AGGAGG;rbs_sp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.1   0.2     0.038       2.4      88     125 ..      36      74 ..      16     122 .. 0.71
+   2 !   71.2   0.6   4.9e-24   3.1e-22      15     170 ..     177     336 ..     162     338 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -0.1 bits;  conditional E-value: 0.038
+                                           HHTTTTTSBSSBETTSSB-.-HHHHHHHHHHHHHHTT-S CS
+                       Phage_integrase  88 leeaeksellfaskrgkpl.srqtvrkafkraveeagie 125
+                                           ++ea++ e++f++  ++    ++t++ +f+++ e++++ 
+  NODE_12_length_17024_cov_6.475868_36  36 KREAKRAEAIFLNDVNEGYsDSKTFDYVFHHYLENSDLR 74 
+                                           567788888888884444404456777777777776655 PP
+
+  == domain 2  score: 71.2 bits;  conditional E-value: 4.9e-24
+                                           SGTHHHHHHHHHHHHHHHHT--HHHHTT-BGGGEETTTTEEEEE...........EEECSSSSEEEEECTHHH CS
+                       Phage_integrase  15 leeslkirdklllellyetGlRisEllsLrvkdldlengvilvh...........eregKgskeravplseea 76 
+                                            e       + l+ l++ tGlRi+E+++L + d +  +++i ++           +r ++ s e +vpl++ +
+  NODE_12_length_17024_cov_6.475868_36 177 EE----QDYRELFTLMFYTGLRIGEAMALVWTDYNKYKKEISINktmdisnrtiyPRPKTDSSEDIVPLPKFI 245
+                                           33....4778899*****************************************8888888999********* PP
+
+                                           HHHHHHHHHHH....HHTTTTTSBSSBETTSSB--HHHHHHHHHHHHHHTT-SSC--CCHHHHHHHHHHHHHC CS
+                       Phage_integrase  77 lellkellska....leeaeksellfaskrgkplsrqtvrkafkraveeagiekpltpHtlRhsfataLleag 145
+                                             +l+e  +++    +  +e+s ++f      p+  + v+k f++a  +++       H lRhs+a+ L+++g
+  NODE_12_length_17024_cov_6.475868_36 246 NTMLTERHQREkelnKYFDERSYFIFGGM--APKHYSHVQKKFQKAFPHYN------IHALRHSYASYLANNG 310
+                                           **********9888777777777888877..99999999999999998855......57************** PP
+
+                                           TTHHHHHHHHTTSSCCHH.HHHHHHH CS
+                       Phage_integrase 146 vdlrvvqkllGHssistt.qiYthva 170
+                                           vd+ v+q+l+ H++i  t  +Y h++
+  NODE_12_length_17024_cov_6.475868_36 311 VDIFVLQSLMRHAQITETmGTYSHLY 336
+                                           ******************899*9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (172 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         5  (0.078125); expected 1.3 (0.02)
+Passed bias filter:                        4  (0.0625); expected 1.3 (0.02)
+Passed Vit filter:                         1  (0.015625); expected 0.1 (0.001)
+Passed Fwd filter:                         1  (0.015625); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 334.54
+//
+Query:       Phage_Integr_2  [M=329]
+Accession:   PF13009.8
+Description: Putative phage integrase
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (329 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         4  (0.0625); expected 1.3 (0.02)
+Passed bias filter:                        1  (0.015625); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 2079.66
+//
+Query:       Phage_integr_3  [M=160]
+Accession:   PF16795.7
+Description: Archaeal phage integrase
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         3  (0.046875); expected 1.3 (0.02)
+Passed bias filter:                        0  (0); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 2415.87
+//
+Query:       Phage_int_SAM_1  [M=83]
+Accession:   PF02899.19
+Description: Phage integrase, N-terminal SAM-like domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (83 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         5  (0.078125); expected 1.3 (0.02)
+Passed bias filter:                        3  (0.046875); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1496.24
+//
+Query:       Phage_int_SAM_2  [M=91]
+Accession:   PF12834.9
+Description: Phage integrase, N-terminal
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (91 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         1  (0.015625); expected 1.3 (0.02)
+Passed bias filter:                        1  (0.015625); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1987.29
+//
+Query:       Phage_int_SAM_3  [M=58]
+Accession:   PF14659.8
+Description: Phage integrase, N-terminal SAM-like domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                             -----------
+    2.1e-12   39.2   4.7    3.8e-12   38.4   2.9    2.5  2  NODE_12_length_17024_cov_6.475868_36  # 14310 # 15359 # 1 # ID=1_36;pa
+
+
+Domain annotation for each sequence (and alignments):
+>> NODE_12_length_17024_cov_6.475868_36  # 14310 # 15359 # 1 # ID=1_36;partial=00;start_type=ATG;rbs_motif=AGGAGG;rbs_sp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.4   2.9   5.9e-14   3.8e-12       1      57 [.      59     113 ..      59     114 .. 0.97
+   2 ?   -2.1   0.0      0.26        17      41      52 ..     172     183 ..     171     186 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 38.4 bits;  conditional E-value: 5.9e-14
+                                           ..HHHHHHHHHHHHHHH-HHHHHHHHHHHTTTHHHHTTSSBGGG--HHHHHHHHHHH CS
+                       Phage_int_SAM_3   1 tFeefleeWledykprvkesTyatyksiiknhIlPyFgkmklskItpkdiqkfqnel 57 
+                                           tF  ++ ++le+   +++++T +++++ + +h +  Fg++k++kIt+ ++q+f++ l
+  NODE_12_length_17024_cov_6.475868_36  59 TFDYVFHHYLEN--SDLRPKTKRRKQNEYHKHFKAKFGHIKMNKITQNQCQEFRKYL 113
+                                           899999******..***************************************9987 PP
+
+  == domain 2  score: -2.1 bits;  conditional E-value: 0.26
+                                           BGGG--HHHHHH CS
+                       Phage_int_SAM_3  41 klskItpkdiqk 52 
+                                           ++++I+ +d+++
+  NODE_12_length_17024_cov_6.475868_36 172 RIKDIEEQDYRE 183
+                                           699***999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (58 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         6  (0.09375); expected 1.3 (0.02)
+Passed bias filter:                        3  (0.046875); expected 1.3 (0.02)
+Passed Vit filter:                         1  (0.015625); expected 0.1 (0.001)
+Passed Fwd filter:                         1  (0.015625); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 584.76
+//
+Query:       Phage_int_SAM_4  [M=85]
+Accession:   PF13495.8
+Description: Phage integrase, N-terminal SAM-like domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (85 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         5  (0.078125); expected 1.3 (0.02)
+Passed bias filter:                        3  (0.046875); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 1274.12
+//
+Query:       Phage_int_SAM_5  [M=99]
+Accession:   PF13102.8
+Description: Phage integrase SAM-like domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                             -----------
+    1.3e-11   36.8   3.5    5.5e-11   34.8   3.5    2.1  1  NODE_12_length_17024_cov_6.475868_36  # 14310 # 15359 # 1 # ID=1_36;pa
+
+
+Domain annotation for each sequence (and alignments):
+>> NODE_12_length_17024_cov_6.475868_36  # 14310 # 15359 # 1 # ID=1_36;partial=00;start_type=ATG;rbs_motif=AGGAGG;rbs_sp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.8   3.5   8.5e-13   5.5e-11       5      93 ..      63     147 ..      59     151 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 34.8 bits;  conditional E-value: 8.5e-13
+                                           HHHHHTHHHHTTS-HHHHHHHHHHHHHTT.TS-..S---TTT--HHHHHHHHHHHHHTS---HHHHHHHHHHH CS
+                       Phage_int_SAM_5   5 yfkeyiekkkkkgskgtlrnykstlkhlk.kFlkkkditfeeidveflekFeeYLkkkkglsentiskylktl 76 
+                                           +f +y+e+++ +  k   r+ ++++kh+k kF    +i++++i+++ +++F++YL  ++  s+n++++ ++ +
+  NODE_12_length_17024_cov_6.475868_36  63 VFHHYLENSDLRP-KTKRRKQNEYHKHFKaKFG---HIKMNKITQNQCQEFRKYL-IENVASTNSARTIWSGF 130
+                                           5677777777665.77788889999***93455...*******************.9**************** PP
+
+                                           HHHHHHHHHTTS--S-H CS
+                       Phage_int_SAM_5  77 kavlnkAvkegiikknp 93 
+                                           k v+n+A k   ++ +p
+  NODE_12_length_17024_cov_6.475868_36 131 KVVINYAKKYFGLRTDP 147
+                                           *******9976666666 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (99 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         6  (0.09375); expected 1.3 (0.02)
+Passed bias filter:                        3  (0.046875); expected 1.3 (0.02)
+Passed Vit filter:                         1  (0.015625); expected 0.1 (0.001)
+Passed Fwd filter:                         1  (0.015625); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 594.59
+//
+Query:       Phage_int_SAM_6  [M=132]
+Accession:   PF18644.3
+Description: Phage integrase SAM-like domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (132 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         5  (0.078125); expected 1.3 (0.02)
+Passed bias filter:                        3  (0.046875); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1734.70
+//
+Query:       PHINT_rpt  [M=55]
+Accession:   PF14882.8
+Description: Phage-integrase repeat unit
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (55 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         0  (0); expected 1.3 (0.02)
+Passed bias filter:                        0  (0); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1244.52
+//
+Query:       rve  [M=102]
+Accession:   PF00665.28
+Description: Integrase core domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (102 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         5  (0.078125); expected 1.3 (0.02)
+Passed bias filter:                        5  (0.078125); expected 1.3 (0.02)
+Passed Vit filter:                         1  (0.015625); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1198.96
+//
+Query:       rve_2  [M=52]
+Accession:   PF13333.8
+Description: Integrase core domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (52 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         5  (0.078125); expected 1.3 (0.02)
+Passed bias filter:                        3  (0.046875); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1075.28
+//
+Query:       rve_3  [M=67]
+Accession:   PF13683.8
+Description: Integrase core domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (67 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         2  (0.03125); expected 1.3 (0.02)
+Passed bias filter:                        1  (0.015625); expected 1.3 (0.02)
+Passed Vit filter:                         1  (0.015625); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1063.49
+//
+Query:       SH3_11  [M=63]
+Accession:   PF18103.3
+Description: Retroviral integrase C-terminal SH3 domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (63 nodes)
+Target sequences:                         64  (12284 residues searched)
+Passed MSV filter:                         0  (0); expected 1.3 (0.02)
+Passed bias filter:                        0  (0); expected 1.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 64  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 1763.89
+//
+[ok]
