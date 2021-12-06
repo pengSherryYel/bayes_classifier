@@ -37,6 +37,7 @@ def runHmmsearch(inputfile, prefix, wd, hmmModel, otherPara="--cpu 1"):
 
     Return: output file path (*.tblout)
     '''
+
     checkEnv("hmmsearch")
     mkdirs(wd)
     cmd = "hmmsearch {4} -o {2}/{1}.hmmsearch.out --tblout {2}/{1}.hmmsearch.tblout {3} {0}".format(

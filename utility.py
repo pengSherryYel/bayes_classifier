@@ -17,7 +17,7 @@ def mkdirs(dirname):
 
 def checkEnv(sft):
     '''
-    check software in the path
+    check software in the PATH
     '''
     cmd = "which %s" % sft
     status = Popen(cmd, shell=True)
