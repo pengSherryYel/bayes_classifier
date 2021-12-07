@@ -1,0 +1,1 @@
+db/mmseq2_linclust_cluster.stat.scoreOpt.tsv filter=lfs diff=lfs merge=lfs -text
