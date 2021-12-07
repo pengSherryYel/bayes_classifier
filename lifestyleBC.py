@@ -302,9 +302,8 @@ def bayes_classifier_batch(inputfile, wd, summaryfile="BC_predict.summary", pfam
 
 if __name__ == "__main__":
     # for single predict
-    bayes_classifier_single(
-        "./example/simulate_art_sample1.21.faa", "simulate_art_sample1.21", "./test")
+    #bayes_classifier_single("./example/simulate_art_sample1.21.faa", "simulate_art_sample1.21", "./test")
     # bayes_classifier_single("./example/simulate_art_sample1.1.faa","simulate_art_sample1.1","./test")
     # bayes_classifier_single("./example/simulate_art_sample1.5.faa","simulate_art_sample1.5","./test")
     # for batch predict
-    # bayes_classifier_batch("./example/example.list","./batch_test","BC_predict.summary")
+    bayes_classifier_batch("./example/example.list","./batch_test","BC_predict.summary")

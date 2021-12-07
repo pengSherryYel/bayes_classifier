@@ -1,0 +1,13 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+#
+# Program:         hmmsearch
+# Version:         3.3.2 (Nov 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /home/viro/xue.peng/script/bayes_classifier/db/excisionase_pfv34.hmm
+# Target file:     example/simulate_art_sample1.21.faa
+# Option settings: hmmsearch -o ./batch_test/BC_pfam/simulate_art_sample1.21.BC_excisionase.hmmsearch.out --tblout ./batch_test/BC_pfam/simulate_art_sample1.21.BC_excisionase.hmmsearch.tblout --cpu 1 /home/viro/xue.peng/script/bayes_classifier/db/excisionase_pfv34.hmm example/simulate_art_sample1.21.faa 
+# Current dir:     /home/viro/xue.peng/script/bayes_classifier
+# Date:            Tue Dec  7 20:34:14 2021
+# [ok]

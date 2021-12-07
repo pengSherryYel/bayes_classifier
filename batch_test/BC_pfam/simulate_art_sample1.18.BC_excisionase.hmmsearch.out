@@ -1,0 +1,100 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/viro/xue.peng/script/bayes_classifier/db/excisionase_pfv34.hmm
+# target sequence database:        example/simulate_art_sample1.18.faa
+# output directed to file:         ./batch_test/BC_pfam/simulate_art_sample1.18.BC_excisionase.hmmsearch.out
+# per-seq hits tabular output:     ./batch_test/BC_pfam/simulate_art_sample1.18.BC_excisionase.hmmsearch.tblout
+# number of worker threads:        1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       DUF1233  [M=70]
+Accession:   PF06806.14
+Description: Putative excisionase (DUF1233)
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (70 nodes)
+Target sequences:                          5  (1106 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  5  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 64.45
+//
+Query:       Exc  [M=77]
+Accession:   PF07825.13
+Description: Excisionase-like protein
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (77 nodes)
+Target sequences:                          5  (1106 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  5  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 175.03
+//
+Query:       Tn916-Xis  [M=69]
+Accession:   PF09035.12
+Description: Excisionase from transposon Tn916
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (69 nodes)
+Target sequences:                          5  (1106 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  5  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 201.40
+//
+[ok]

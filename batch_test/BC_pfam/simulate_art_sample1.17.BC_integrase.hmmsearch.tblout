@@ -1,0 +1,14 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+NODE_16_length_15798_cov_6.458489_2 -          Phage_integrase      PF00589.24   6.9e-20   64.6   0.0   1.4e-19   63.6   0.0   1.5   1   0   0   1   1   1   1 # 340 # 1524 # -1 # ID=3_2;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.559
+#
+# Program:         hmmsearch
+# Version:         3.3.2 (Nov 2020)
+# Pipeline mode:   SEARCH
+# Query file:      /home/viro/xue.peng/script/bayes_classifier/db/integrase_pfv34.hmm
+# Target file:     example/simulate_art_sample1.17.faa
+# Option settings: hmmsearch -o ./batch_test/BC_pfam/simulate_art_sample1.17.BC_integrase.hmmsearch.out --tblout ./batch_test/BC_pfam/simulate_art_sample1.17.BC_integrase.hmmsearch.tblout --cpu 1 /home/viro/xue.peng/script/bayes_classifier/db/integrase_pfv34.hmm example/simulate_art_sample1.17.faa 
+# Current dir:     /home/viro/xue.peng/script/bayes_classifier
+# Date:            Tue Dec  7 20:33:21 2021
+# [ok]
