@@ -11,7 +11,7 @@ import os
 from subprocess import Popen
 import math
 from utility import mkdirs, checkEnv
-
+from Bio import Seq,SeqIO
 
 # ------ function ------
 # def runProdigal(inputseq,prefix,wd):
@@ -299,6 +299,33 @@ def bayes_classifier_batch(inputfile, wd, summaryfile="BC_predict.summary", pfam
             opt.write("\t".join([str(i) for i in res])+"\n")
     opt.close()
 
+
+def bayes_classifier_contig(inputfile, wd, summaryfile="BC_predict.summary", pfam_creteria=1e-5, mmseqs_creteria=1e-5):
+    '''
+    Aim: batch predict lifestyle
+    Usage: bayes_classifier_batch(inputfile,wd,summaryfile,pfam_creteria=1e-5,mmseq_creteria=1e-5)
+        inputfile: contig file
+        wd: work path where put the result
+        summaryfile: file name for summary of the predict output. location will be under the wd path
+        pfam_creteria: creteria to filter pfam evalue greater than x (default: 1e-5)
+        mmseqs_creteria: creteria to filter mmseqs evalue greater than x (default: 1e-5)
+    '''
+
+    mkdirs(wd)
+    opt = open(os.path.join(wd, summaryfile), "w")
+    header = "sample_name\tintegrase_number\texcisionase_number\tpfam_label\tbc_temperate\tbc_virulent\tbc_label\tfinal_label\tpath\n"
+    opt.write(header)
+
+    for seq in SeqIO.parse(inputfile,"fasta"):
+        tmpfile="./%s.tmp"%seq.id
+        SeqIO.write(seq,tmpfile,"fasta")
+        res = bayes_classifier_single(
+                tmpfile, seq.id, wd, pfam_creteria, mmseqs_creteria)
+        prefix, inte_label, excision_label, pfam_label, p_total_temperate, p_total_lytic, bc_label, final_label = res
+        res.append(inputfile)
+        opt.write("\t".join([str(i) for i in res])+"\n")
+        os.remove(tmpfile)
+    opt.close()
 
 if __name__ == "__main__":
     # for single predict
