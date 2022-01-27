@@ -14,13 +14,30 @@ from utility import mkdirs, checkEnv
 from Bio import Seq,SeqIO
 
 # ------ function ------
-# def runProdigal(inputseq,prefix,wd):
-#    cmd = "prodigal -a {2}/{1}.prodigal.gene.faa -d {2}/{1}.prodigal.gene.fna -g 11  -i {0} -o {2}/{1}.prodigal.output -s {2}/{1}.prodigal.gene.score".format(inputseq,prefix,wd)
-#    print("RUN command: %s\n"%cmd)
-#    obj = Popen(cmd,shell=True)
-#    obj.wait()
-#    print("prodigal done!")
-#    return "%s/%s.prodigal.gene.faa"%(wd,prefix)
+def runProdigal(inputseq, prefix, wd, program="meta", otherPara="-g 11"):
+    '''
+    Aim: run prodigal to predict gene from contig
+
+    Usage: runProdigal(inputseq,prefix,wd,program="meta")
+        inputfile: input seq file
+	prefix: output prefix
+        wd: work path where put the result
+	program: euqal to -p parameter in prodigal(meta(default)|single)
+        otherPara: parameter for run the prodigal
+            default: "-g 11"
+
+    Return: output file path (*.faa)
+    '''
+    #cmd = "prodigal -a {2}/{1}.prodigal.gene.faa -d {2}/{1}.prodigal.gene.fna -g 11  -i {0} -o {2}/{1}.prodigal.output -s {2}/{1}.prodigal.gene.score".format(inputseq,prefix,wd)
+    checkEnv("prodigal")
+    mkdirs(wd)
+    cmd = "prodigal -i {0} {4} -a {2}/{1}.prodigal.gene.faa -d {2}/{1}.prodigal.gene.ffn -p {3} -f gff -o {2}/{1}.temp".format(
+            inputseq, prefix, wd, program, otherPara)
+    print("RUN command: %s\n"%cmd)
+    obj = Popen(cmd,shell=True)
+    obj.wait()
+    print("prodigal done!")
+    return "%s/%s.prodigal.gene.faa"%(wd,prefix)
 
 
 def runHmmsearch(inputfile, prefix, wd, hmmModel, otherPara="--cpu 1"):
@@ -154,6 +171,9 @@ def calcaulate_score(mmseqOpt, scoreD, creteria=1e-5):
             else:
                 if float(evalue) < float(d[query][-1]):
                     d[query] = [ref, evalue]
+    
+    # calculate how many genes are matched
+    match_gene_number = len(d)
 
     # enumerate the dict to add the score of each lifestyle to lists
     for query, values in d.items():
@@ -179,7 +199,7 @@ def calcaulate_score(mmseqOpt, scoreD, creteria=1e-5):
         label = "Virulent"
     else:
         label = "NotEnoughInfo"
-    return p_total_temperate, p_total_lytic, label
+    return p_total_temperate, p_total_lytic, label, match_gene_number
 
 
 def chunk_list(inputlist, chunksize=10):
@@ -260,7 +280,7 @@ def bayes_classifier_single(inputfile, prefix, wd, pfam_creteria=1e-5, mmseqs_cr
     member2scoreD = load_scoreD(score_file)
 
     # read mmseqs easy search file
-    p_total_temperate, p_total_lytic, bc_label = calcaulate_score(
+    p_total_temperate, p_total_lytic, bc_label, match_gene_number = calcaulate_score(
         mmseq_opt, member2scoreD, creteria=mmseqs_creteria)
     print(prefix, inte_label, excision_label, pfam_label,
           p_total_temperate, p_total_lytic, bc_label)
@@ -268,7 +288,7 @@ def bayes_classifier_single(inputfile, prefix, wd, pfam_creteria=1e-5, mmseqs_cr
     # phase 3 combine result pfam and bayes classifier
     if pfam_label == "Temperate" or bc_label == "Temperate":
         final_label = "Temperate"
-    return [prefix, inte_label, excision_label, pfam_label, p_total_temperate, p_total_lytic, bc_label, final_label]
+    return [prefix, inte_label, excision_label, pfam_label, p_total_temperate, p_total_lytic, bc_label, final_label, match_gene_number]
 
 
 def bayes_classifier_batch(inputfile, wd, summaryfile="BC_predict.summary", pfam_creteria=1e-5, mmseqs_creteria=1e-5):
@@ -286,7 +306,7 @@ def bayes_classifier_batch(inputfile, wd, summaryfile="BC_predict.summary", pfam
 
     mkdirs(wd)
     opt = open(os.path.join(wd, summaryfile), "w")
-    header = "sample_name\tintegrase_number\texcisionase_number\tpfam_label\tbc_temperate\tbc_virulent\tbc_label\tfinal_label\tpath\n"
+    header = "sample_name\tintegrase_number\texcisionase_number\tpfam_label\tbc_temperate\tbc_virulent\tbc_label\tfinal_label\tmatch_gene_number\tpath\n"
     opt.write(header)
 
     with open(inputfile) as f:
@@ -294,15 +314,20 @@ def bayes_classifier_batch(inputfile, wd, summaryfile="BC_predict.summary", pfam
             sample_name, path = line.strip("\n").split("\t")
             res = bayes_classifier_single(
                 path, sample_name, wd, pfam_creteria, mmseqs_creteria)
-            prefix, inte_label, excision_label, pfam_label, p_total_temperate, p_total_lytic, bc_label, final_label = res
+            #prefix, inte_label, excision_label, pfam_label, p_total_temperate, p_total_lytic, bc_label, final_label = res
             res.append(path)
             opt.write("\t".join([str(i) for i in res])+"\n")
+            opt.flush()
     opt.close()
 
 
 def bayes_classifier_contig(inputfile, wd, summaryfile="BC_predict.summary", pfam_creteria=1e-5, mmseqs_creteria=1e-5):
     '''
-    Aim: batch predict lifestyle
+    Aim: predict lifestyle for contig file 
+    (WARNING: treat each *seq* as an indepent virus sequence, not suit for a genome contain multiple sequence)
+    
+    Process: prodigal --> lifestyleBC
+    
     Usage: bayes_classifier_batch(inputfile,wd,summaryfile,pfam_creteria=1e-5,mmseq_creteria=1e-5)
         inputfile: contig file
         wd: work path where put the result
@@ -313,19 +338,57 @@ def bayes_classifier_contig(inputfile, wd, summaryfile="BC_predict.summary", pfa
 
     mkdirs(wd)
     opt = open(os.path.join(wd, summaryfile), "w")
-    header = "sample_name\tintegrase_number\texcisionase_number\tpfam_label\tbc_temperate\tbc_virulent\tbc_label\tfinal_label\tpath\n"
+    header = "sample_name\tintegrase_number\texcisionase_number\tpfam_label\tbc_temperate\tbc_virulent\tbc_label\tfinal_label\tmatch_gene_number\tpath\n"
     opt.write(header)
 
     for seq in SeqIO.parse(inputfile,"fasta"):
         tmpfile="./%s.tmp"%seq.id
         SeqIO.write(seq,tmpfile,"fasta")
+        faaFile = runProdigal(tmpfile, seq.id, "%s/BC_prodigal"%wd, program="meta", otherPara="-g 11")
         res = bayes_classifier_single(
-                tmpfile, seq.id, wd, pfam_creteria, mmseqs_creteria)
-        prefix, inte_label, excision_label, pfam_label, p_total_temperate, p_total_lytic, bc_label, final_label = res
-        res.append(inputfile)
+                faaFile, seq.id, wd, pfam_creteria, mmseqs_creteria)
+        #prefix, inte_label, excision_label, pfam_label, p_total_temperate, p_total_lytic, bc_label, final_label = res
+        res.append(faaFile)
         opt.write("\t".join([str(i) for i in res])+"\n")
+        opt.flush()
         os.remove(tmpfile)
     opt.close()
+
+
+def bayes_classifier_genomes(inputfile, wd, summaryfile="BC_predict.summary", pfam_creteria=1e-5, mmseqs_creteria=1e-5):
+    '''
+    Aim: predict lifestyle for one genome file which contain multiple seq
+    (WARNING: treat *inputfile* as an indepent virus sequence(no matter how many seq are there), suit for a genome contain multiple sequence)
+    
+    Process: prodigal --> lifestyleBC
+    
+    Usage: bayes_classifier_batch(inputfile,wd,summaryfile,pfam_creteria=1e-5,mmseq_creteria=1e-5)
+        inputfile: a tab seperate file contain two column.
+            first column: sample name;
+            second column: path of the genome file;
+        wd: work path where put the result
+        summaryfile: file name for summary of the predict output. location will be under the wd path
+        pfam_creteria: creteria to filter pfam evalue greater than x (default: 1e-5)
+        mmseqs_creteria: creteria to filter mmseqs evalue greater than x (default: 1e-5)
+    '''
+
+    mkdirs(wd)
+    opt = open(os.path.join(wd, summaryfile), "w")
+    header = "sample_name\tintegrase_number\texcisionase_number\tpfam_label\tbc_temperate\tbc_virulent\tbc_label\tfinal_label\tmatch_gene_number\tpath\n"
+    opt.write(header)
+
+    with open(inputfile) as f:
+        for line in f:
+            sample_name, path = line.strip("\n").split("\t")
+            faaFile = runProdigal(path, sample_name, "%s/BC_prodigal"%wd, program="meta", otherPara="-g 11")
+            res = bayes_classifier_single(
+                faaFile, sample_name, wd, pfam_creteria, mmseqs_creteria)
+            #prefix, inte_label, excision_label, pfam_label, p_total_temperate, p_total_lytic, bc_label, final_label = res
+            res.append(faaFile)
+            opt.write("\t".join([str(i) for i in res])+"\n")
+            opt.flush()
+    opt.close()
+
 
 if __name__ == "__main__":
     # for single predict
